@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace NQueens
 {
-    class Square
+    public class Square : System.Windows.Forms.Button
     {
+        public void locateQueen()
+        {
+            
+        }
     }
 }

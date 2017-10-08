@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lableTitle = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.noQueen = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.lblTitleTime = new System.Windows.Forms.Label();
+            this.pictureBoxStarting = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btnShowResult = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.noQueen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStarting)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lableTitle
@@ -46,112 +52,138 @@
             this.lableTitle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lableTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableTitle.ForeColor = System.Drawing.Color.Chocolate;
-            this.lableTitle.Location = new System.Drawing.Point(106, 28);
+            this.lableTitle.Location = new System.Drawing.Point(154, 19);
             this.lableTitle.Name = "lableTitle";
-            this.lableTitle.Size = new System.Drawing.Size(340, 31);
+            this.lableTitle.Size = new System.Drawing.Size(338, 31);
             this.lableTitle.TabIndex = 0;
-            this.lableTitle.Text = "BÀI TOÁN N-QUÂN HẬU";
+            this.lableTitle.Text = "BÀI TOÁN N QUÂN HẬU";
             this.lableTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // noQueen
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(183, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 61);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
+            this.noQueen.Location = new System.Drawing.Point(489, 106);
+            this.noQueen.Name = "noQueen";
+            this.noQueen.Size = new System.Drawing.Size(86, 20);
+            this.noQueen.TabIndex = 2;
             // 
-            // button2
+            // label1
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(243, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 61);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(485, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Số quân hậu:";
             // 
-            // button3
+            // timer1
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(303, 159);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 61);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = false;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button4
+            // lblTime
             // 
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.Location = new System.Drawing.Point(183, 217);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 61);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = false;
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(514, 304);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(40, 17);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "3:00";
+            this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
+            // btnStart
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(243, 217);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(63, 61);
-            this.button5.TabIndex = 1;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnStart.BackColor = System.Drawing.Color.Black;
+            this.btnStart.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.White;
+            this.btnStart.Location = new System.Drawing.Point(495, 149);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "START";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnStart.MouseEnter += new System.EventHandler(this.btnStart_MouseEnter);
+            this.btnStart.MouseLeave += new System.EventHandler(this.btnStart_MouseLeave);
             // 
-            // button6
+            // lblTitleTime
             // 
-            this.button6.BackColor = System.Drawing.Color.Gray;
-            this.button6.Location = new System.Drawing.Point(303, 217);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(63, 61);
-            this.button6.TabIndex = 1;
-            this.button6.UseVisualStyleBackColor = false;
+            this.lblTitleTime.AutoSize = true;
+            this.lblTitleTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleTime.ForeColor = System.Drawing.Color.Red;
+            this.lblTitleTime.Location = new System.Drawing.Point(504, 284);
+            this.lblTitleTime.Name = "lblTitleTime";
+            this.lblTitleTime.Size = new System.Drawing.Size(60, 13);
+            this.lblTitleTime.TabIndex = 6;
+            this.lblTitleTime.Text = "Thời gian";
             // 
-            // button7
+            // pictureBoxStarting
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(183, 275);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(63, 61);
-            this.button7.TabIndex = 1;
-            this.button7.UseVisualStyleBackColor = false;
+            this.pictureBoxStarting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxStarting.Image")));
+            this.pictureBoxStarting.InitialImage = null;
+            this.pictureBoxStarting.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxStarting.Name = "pictureBoxStarting";
+            this.pictureBoxStarting.Size = new System.Drawing.Size(400, 400);
+            this.pictureBoxStarting.TabIndex = 7;
+            this.pictureBoxStarting.TabStop = false;
             // 
-            // button8
+            // flowLayoutPanel1
             // 
-            this.button8.BackColor = System.Drawing.Color.Gray;
-            this.button8.Location = new System.Drawing.Point(243, 275);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(63, 61);
-            this.button8.TabIndex = 1;
-            this.button8.UseVisualStyleBackColor = false;
+            this.flowLayoutPanel1.Controls.Add(this.pictureBoxStarting);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 67);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(400, 400);
+            this.flowLayoutPanel1.TabIndex = 8;
             // 
-            // button9
+            // notifyIcon1
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(303, 275);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(63, 61);
-            this.button9.TabIndex = 1;
-            this.button9.UseVisualStyleBackColor = false;
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // btnShowResult
+            // 
+            this.btnShowResult.BackColor = System.Drawing.Color.Black;
+            this.btnShowResult.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnShowResult.FlatAppearance.BorderSize = 0;
+            this.btnShowResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowResult.ForeColor = System.Drawing.Color.White;
+            this.btnShowResult.Location = new System.Drawing.Point(495, 398);
+            this.btnShowResult.Name = "btnShowResult";
+            this.btnShowResult.Size = new System.Drawing.Size(75, 23);
+            this.btnShowResult.TabIndex = 5;
+            this.btnShowResult.Text = "ĐÁP ÁN";
+            this.btnShowResult.UseVisualStyleBackColor = false;
+            this.btnShowResult.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnShowResult.MouseEnter += new System.EventHandler(this.btnStart_MouseEnter);
+            this.btnShowResult.MouseLeave += new System.EventHandler(this.btnStart_MouseLeave);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 520);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(620, 487);
+            this.Controls.Add(this.lblTitleTime);
+            this.Controls.Add(this.btnShowResult);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.noQueen);
             this.Controls.Add(this.lableTitle);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.noQueen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStarting)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,15 +192,16 @@
         #endregion
 
         private System.Windows.Forms.Label lableTitle;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.NumericUpDown noQueen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label lblTitleTime;
+        private System.Windows.Forms.PictureBox pictureBoxStarting;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button btnShowResult;
     }
 }
 
